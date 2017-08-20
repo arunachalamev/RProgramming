@@ -123,3 +123,13 @@ na_count <-sapply(naRemovedDS, function(y) sum(length(which(is.na(y)))))
 na_count <- data.frame(na_count)
 na_count
 
+#Final DS
+naRemovedDS$Purpose <- gsub("Other","other",naRemovedDS$Purpose)
+write.csv(naRemovedDS, file = "D:\\gitProjects\\RProgramming\\LoanStatus\\FinalDS.csv", row.names = FALSE)
+
+
+
+
+table(CleanDS[,"LoanStatus"])
+
+

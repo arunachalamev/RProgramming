@@ -75,9 +75,9 @@ for train_index, test_index in rs:
     AUC_rf.append(metrics.auc(fpr,tpr))
     
 print "AUC :"    
-print "Logistic Regression - Mean:", np.mean(AUC_lr), "Variance: ",np.var(AUC_lr)
-print "AdaBoost            - Mean:", np.mean(AUC_ab), "Variance: ",np.var(AUC_ab)
-print "Random Forest       - Mean:", np.mean(AUC_rf), "Variance: ",np.var(AUC_rf)
+print "Logistic Regression - Mean:", np.mean(AUC_lr), "Std dev: ",np.std(AUC_lr)
+print "AdaBoost            - Mean:", np.mean(AUC_ab), "Std dev: ",np.std(AUC_ab)
+print "Random Forest       - Mean:", np.mean(AUC_rf), "Std dev: ",np.std(AUC_rf)
 
 
 

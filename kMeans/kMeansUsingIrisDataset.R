@@ -20,3 +20,4 @@ table(irisCluster$cluster,iris$Species)
 irisCluster$cluster <- as.factor(irisCluster$cluster)
 ggplot(iris,aes(Petal.Length,Petal.Width,color=irisCluster$cluster))+geom_point()
 
+#testing

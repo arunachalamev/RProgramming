@@ -1,5 +1,8 @@
 # http://statr.me/2016/02/large-scale-eigen-and-svd-with-rarpack/
 
+
+#pca algorithm
+
 library(rARPACK)
 
 set.seed(10)
@@ -18,7 +21,7 @@ library (microbenchmark)
 set.seed(10);
 x = matrix(rnorm(2000*500),2000)
 
-microbenchmark(princomp(x),prcomp(x),pc(x,3), times=5)
+
 
 pc = function (x,k)
 {
@@ -28,3 +31,5 @@ pc = function (x,k)
   decomp = svds(xc,k,nu=0,nv=k)
   return(list(lodings = decomp$v, scores = xc %*% decomp$v))
 }
+
+microbenchmark(princomp(x),prcomp(x),pc(x,3), times=5)
